@@ -178,11 +178,11 @@ class TabbedView(BrowserNotebook):
 
         """
         def has_web_scheme(address):
-            if address == '':
+            if address == '' or address == None:
                 return False
 
             scheme, sep, after = address.partition(':')
-            if sep == '':
+            if sep == ''or sep == None:
                 return False
 
             return scheme in _WEB_SCHEMES
